@@ -1,0 +1,20 @@
+drop table if exists Book;
+
+create table Book
+(
+   bookid               bigint not null,
+   bookname             varchar(255),
+   state                bigint,
+   authorID             bigint,
+   primary key (bookid);
+   foreign key (state) references islend (state) ;
+   foreign key (authorID) references t_author (authorID) ;
+);
+
+INSERT INTO `book` VALUES (1, 'MVP', 1, 5);
+INSERT INTO `book` VALUES (2, 'doge', 0, 4);
+INSERT INTO `book` VALUES (3, 'SherlockHolmes', 0, 3);
+INSERT INTO `book` VALUES (4, 'Hamlet', 0, 1);
+INSERT INTO `book` VALUES (5, 'Twocities', 0, 2);
+INSERT INTO `book` VALUES (6, 'King', 0, 5);
+INSERT INTO `book` VALUES (7, 'FMVP', 0, 5);

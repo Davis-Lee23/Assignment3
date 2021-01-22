@@ -1,0 +1,10 @@
+drop table if exists islend;
+
+create table islend
+(
+   state                bigint not null,
+   primary key (state)
+);
+
+INSERT INTO `islend` VALUES (0);
+INSERT INTO `islend` VALUES (1);
